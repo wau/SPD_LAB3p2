@@ -89,9 +89,6 @@ app.get("/movies", async ( inRequest : Request , inResponse : Response ) => {
     }
 });
 
-<<<<<<< HEAD:DAW/LABFINAL/server/src/main.ts
-
-=======
 app.get("/users/:userId", async (inRequest: Request,inResponse:Response) => {
     try{
         const usersWorker: Users.Worker = new Users.Worker();
@@ -106,27 +103,16 @@ app.get("/users/:userId", async (inRequest: Request,inResponse:Response) => {
         inResponse.send("error");
     }
 });
->>>>>>> 4e1dc40ef5de1761da5ca3b04a47a8716e9cd817:DAW/DAW/LABFINALDAW/ServerSide/src/main.ts
 
 app.get("/reviews/:movieId", async ( inRequest : Request , inResponse : Response ) => {
     try {
         const rWorker: Reviews.Worker = new Reviews.Worker();
-<<<<<<< HEAD:DAW/LABFINAL/server/src/main.ts
-        const reviewToSend :IReview = inRequest.body;
-//        reviewToSend.userId = inRequest.query.userId as string;
-
-        const movieId :string = inRequest.params.movieId;
-        reviewToSend.movieId = inRequest.params.movieId;
-        const reviews :IReview[] = await rWorker.getReviews(movieId);
-
-=======
 
         const movieId :string = inRequest.params.movieId;
         
         const reviews :IReview[] = await rWorker.getReviews(movieId);
 
 
->>>>>>> 4e1dc40ef5de1761da5ca3b04a47a8716e9cd817:DAW/DAW/LABFINALDAW/ServerSide/src/main.ts
         inResponse.json(reviews);
         
     } catch (inError) {
@@ -164,16 +150,6 @@ app.put("/reviews/:movieId", async ( inRequest : Request , inResponse : Response
         await rWorker.editReview(reviewToSend);
         inResponse.json(reviewToSend); 
 
-<<<<<<< HEAD:DAW/LABFINAL/server/src/main.ts
-
-        //console.log(reviewToSend.userId);
-        console.log(reviewToSend);
-
-        await rWorker.editReview(reviewToSend);
-        inResponse.json(reviewToSend); 
-
-=======
->>>>>>> 4e1dc40ef5de1761da5ca3b04a47a8716e9cd817:DAW/DAW/LABFINALDAW/ServerSide/src/main.ts
     } catch (inError) {
         inResponse.send("error") ;
     }
@@ -187,10 +163,6 @@ app.delete("/reviews/:movieId", async ( inRequest : Request , inResponse : Respo
         const movieId :string = inRequest.params.movieId;
 
         userId = userId.replace(/(\r\n|\n|\r)/gm, "");
-<<<<<<< HEAD:DAW/LABFINAL/server/src/main.ts
-        //console.log(userId, movieId);
-=======
->>>>>>> 4e1dc40ef5de1761da5ca3b04a47a8716e9cd817:DAW/DAW/LABFINALDAW/ServerSide/src/main.ts
 
         await rWorker.deleteReview(userId, movieId); 
         inResponse.send("ok");

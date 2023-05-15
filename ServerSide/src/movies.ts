@@ -5,11 +5,7 @@ const Datastore = require("nedb");
 export interface IMovie {
     _id?: string, //automatically generated
     name: string,
-<<<<<<< HEAD:DAW/LABFINAL/server/src/movies.ts
-    description :string,
-=======
     description:string,
->>>>>>> 4e1dc40ef5de1761da5ca3b04a47a8716e9cd817:DAW/DAW/LABFINALDAW/ServerSide/src/movies.ts
     imageUrl: string,
 }
 

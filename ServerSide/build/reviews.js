@@ -69,12 +69,6 @@ class Worker {
                     inReject(inError);
                 }
                 else {
-<<<<<<< HEAD:DAW/LABFINAL/server/build/reviews.js
-                    //console.log("Movies.Worker.addReview(): Ok ", inNewDoc);
-                    //inResolve(inNewDoc);
-                    console.log(review);
-=======
->>>>>>> 4e1dc40ef5de1761da5ca3b04a47a8716e9cd817:DAW/DAW/LABFINALDAW/ServerSide/build/reviews.js
                     if (numReplaced >= 1)
                         inResolve();
                     else
@@ -84,10 +78,6 @@ class Worker {
         });
     }
     deleteReview(userId, movieId) {
-<<<<<<< HEAD:DAW/LABFINAL/server/build/reviews.js
-        console.log(userId);
-=======
->>>>>>> 4e1dc40ef5de1761da5ca3b04a47a8716e9cd817:DAW/DAW/LABFINALDAW/ServerSide/build/reviews.js
         return new Promise((inResolve, inReject) => {
             this.db.remove({ userId: userId,
                 movieId: movieId,
@@ -96,10 +86,6 @@ class Worker {
                     inReject(inError);
                 }
                 else {
-<<<<<<< HEAD:DAW/LABFINAL/server/build/reviews.js
-                    console.log(numReplaced);
-=======
->>>>>>> 4e1dc40ef5de1761da5ca3b04a47a8716e9cd817:DAW/DAW/LABFINALDAW/ServerSide/build/reviews.js
                     inResolve();
                 }
             });

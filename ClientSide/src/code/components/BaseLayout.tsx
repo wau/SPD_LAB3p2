@@ -8,11 +8,11 @@ import WelcomeUser from "./WelcomeUser";
 import Login from "./Login";
 import Footer from "./Footer";
 import Register from "./Register";
-import LoopProducts from "./LoopProducts"
+import LoopProducts from "./loopProducts"
 import { createState } from "../state";
 import LogoBar from "./LogoBar";
 import FarewellUser from "./FarewellUser";
-import RegisterMessage from "./registerMessage";
+import RegisterMessage from "./RegisterMessage";
 
 
 /**

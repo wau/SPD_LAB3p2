@@ -104,15 +104,6 @@ app.get("/movies", (inRequest, inResponse) => __awaiter(void 0, void 0, void 0, 
         inResponse.send("error");
     }
 }));
-<<<<<<< HEAD:DAW/LABFINAL/server/build/main.js
-app.get("/reviews/:movieId", (inRequest, inResponse) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        const rWorker = new Reviews.Worker();
-        const reviewToSend = inRequest.body;
-        //        reviewToSend.userId = inRequest.query.userId as string;
-        const movieId = inRequest.params.movieId;
-        reviewToSend.movieId = inRequest.params.movieId;
-=======
 app.get("/users/:userId", (inRequest, inResponse) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const usersWorker = new Users.Worker();
@@ -128,7 +119,6 @@ app.get("/reviews/:movieId", (inRequest, inResponse) => __awaiter(void 0, void 0
     try {
         const rWorker = new Reviews.Worker();
         const movieId = inRequest.params.movieId;
->>>>>>> 4e1dc40ef5de1761da5ca3b04a47a8716e9cd817:DAW/DAW/LABFINALDAW/ServerSide/build/main.js
         const reviews = yield rWorker.getReviews(movieId);
         inResponse.json(reviews);
     }
@@ -155,33 +145,10 @@ app.put("/reviews/:movieId", (inRequest, inResponse) => __awaiter(void 0, void 0
         const rWorker = new Reviews.Worker();
         const reviewToSend = inRequest.body;
         reviewToSend.userId = inRequest.query.userId;
-<<<<<<< HEAD:DAW/LABFINAL/server/build/main.js
-        reviewToSend.userId.replace(/[\r\n]/gm, ''); //remove \n of the string
-        reviewToSend.movieId = inRequest.params.movieId;
-        //console.log(reviewToSend.userId);
-        console.log(reviewToSend);
-        yield rWorker.editReview(reviewToSend);
-        inResponse.json(reviewToSend);
-    }
-    catch (inError) {
-        inResponse.send("error");
-    }
-}));
-app.delete("/reviews/:movieId", (inRequest, inResponse) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        const rWorker = new Reviews.Worker();
-        let userId = inRequest.query.userId;
-        const movieId = inRequest.params.movieId;
-        userId = userId.replace(/(\r\n|\n|\r)/gm, "");
-        //console.log(userId, movieId);
-        yield rWorker.deleteReview(userId, movieId);
-        inResponse.send("ok");
-=======
         reviewToSend.userId.replace(/(\r\n|\n|\r)/gm, ""); //remove \n of the string
         reviewToSend.movieId = inRequest.params.movieId;
         yield rWorker.editReview(reviewToSend);
         inResponse.json(reviewToSend);
->>>>>>> 4e1dc40ef5de1761da5ca3b04a47a8716e9cd817:DAW/DAW/LABFINALDAW/ServerSide/build/main.js
     }
     catch (inError) {
         inResponse.send("error");

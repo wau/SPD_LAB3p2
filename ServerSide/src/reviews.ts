@@ -69,13 +69,7 @@ export class Worker {
                        
                         inReject(inError);
                     } else {
-<<<<<<< HEAD:DAW/LABFINAL/server/src/reviews.ts
-                        //console.log("Movies.Worker.addReview(): Ok ", inNewDoc);
-                        //inResolve(inNewDoc);
-                        console.log(review);
-=======
             
->>>>>>> 4e1dc40ef5de1761da5ca3b04a47a8716e9cd817:DAW/DAW/LABFINALDAW/ServerSide/src/reviews.ts
                         if (numReplaced >= 1)
                             inResolve();
                         else inReject(inError);
@@ -87,11 +81,7 @@ export class Worker {
 
     public deleteReview(userId :string, movieId :string): Promise<void> {
 
-<<<<<<< HEAD:DAW/LABFINAL/server/src/reviews.ts
-        console.log(userId);
-=======
   
->>>>>>> 4e1dc40ef5de1761da5ca3b04a47a8716e9cd817:DAW/DAW/LABFINALDAW/ServerSide/src/reviews.ts
         return new Promise((inResolve, inReject) => { // este método passa o objeto adicionaodo para a callback que irºa possuir um campo _id, sendo esse obejto rentornado caller e ao client, de maneira a aparecer no ecrã
             this.db.remove(
                 {userId: userId,
@@ -102,11 +92,7 @@ export class Worker {
                     if (inError) {
                         inReject(inError);
                     } else {
-<<<<<<< HEAD:DAW/LABFINAL/server/src/reviews.ts
-                        console.log(numReplaced)
-=======
                        
->>>>>>> 4e1dc40ef5de1761da5ca3b04a47a8716e9cd817:DAW/DAW/LABFINALDAW/ServerSide/src/reviews.ts
                         inResolve();
                     }
                 }
