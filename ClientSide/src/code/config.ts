@@ -1,4 +1,4 @@
 export const config: { serverAddress: string} =
 {
-  serverAddress : "http://localhost:8080",
+  serverAddress : "http://16.16.114.7:8080",
 };
